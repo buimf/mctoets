@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'cuyxcrrionamooretypeface201Rg';
+    src: url('font/cuyxcrrionamooretypeface2015-regular-webfont.eot');
+    src: url('font/cuyxcrrionamooretypeface2015-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/cuyxcrrionamooretypeface2015-regular-webfont.woff2') format('woff2'),
+         url('font/cuyxcrrionamooretypeface2015-regular-webfont.woff') format('woff'),
+         url('font/cuyxcrrionamooretypeface2015-regular-webfont.ttf') format('truetype'),
+         url('font/cuyxcrrionamooretypeface2015-regular-webfont.svg#cuyxcrrionamooretypeface201Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'cuyxcrrionamooretypeface201Rg', sans-serif;   
+}
+
+code {
+    font-size: 20px;
+}
+
+.antwoorden {
+    list-style-type: upper-alpha;
+    /* letters graag ook in kleurvakje */
+    list-style-position: inside;
+    padding-left:0em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.antwoorden li:nth-child(even) {
+    background-color: #eee;
+}
+.antwoorden li {
+    /* maar wel ruimte om de keuze letters */ 
+    padding-left: 1em;
+}
+
+.vraag {
+    /* zodat vragen bij elkaar blijven bij printen */
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 10px;
+}
