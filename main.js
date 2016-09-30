@@ -27,8 +27,8 @@ var fill = function (data) {
         $.each(data.feed.entry, function (i, v) {
             // bouw geshuffelde antwoorden array
             shuffle(order);
-            // houd antwoorden bij
-            antwoorden[i] = order[0];
+            // houd antwoorden bij als hoofdletters, met tab voor excel kolommen
+            antwoorden[i] = i+1 + "\t" + String.fromCharCode(65 + order[0]);
             // antwoorden voor gebruik
             var ans = [];
             /* ja, wat repetitief, maar wel helder */
@@ -50,6 +50,6 @@ var fill = function (data) {
         // toevoegen na de H1
         $('h1').after(temp);
         // FF de antwoorden dumpen...
-        console.log(antwoorden)
+        console.log(antwoorden.join("\n"));
     }
     // klaar!
